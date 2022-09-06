@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"api-rest-go/models"
+	"api-rest-go/routes"
+)
 
 func main() {
-	fmt.Println("Starting")
+
+	models.Personalidades = []models.Personalidade{
+		{Id: 1, Nome: "John", Historia: "Grande cantor"},
+		{Id: 2, Nome: "Josue", Historia: "Grande construtor"},
+	}
+
+	routes.HandleRequest()
 }
